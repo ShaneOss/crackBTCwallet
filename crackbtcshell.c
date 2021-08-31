@@ -192,7 +192,7 @@ int main()  {
             param = strtol(aux,NULL,10);
             switch(indexOf(token,params_set,6))  {
       			  case 0: //threads
-        				if(param > 0 && param <= 64) {  /* Can anyone need more than 64 threads?*/
+        				if(param > 0 && param <= 1000) {  /* Can anyone need more than 64 threads?*/
         				  NTHREADS = param;
         				}else  {
         				  printf("Invalid threads number\n");
