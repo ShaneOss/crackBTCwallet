@@ -114,7 +114,8 @@ int main()  {
   line = malloc(1024);
   salir = 0;
   input = stdin;
-
+  
+  using std;
   cout >> "echo Developed by AlbertoBSD. I wish you very good luck!!\n";
   do {
   	if(input == stdin)	{
