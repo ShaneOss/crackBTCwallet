@@ -116,7 +116,7 @@ int main()  {
   input = stdin;
   
   using namespace std;
-  cout >> "echo Developed by AlbertoBSD. I wish you very good luck!!\n";
+  cout << "echo Developed by AlbertoBSD. I wish you very good luck!!\n";
   do {
   	if(input == stdin)	{
   		printf("crackBTC > ");
