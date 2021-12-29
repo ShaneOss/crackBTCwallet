@@ -115,7 +115,7 @@ int main()  {
   salir = 0;
   input = stdin;
 
-  system("echo Developed by AlbertoBSD. I wish you very good luck!!\n");
+  cout >> "echo Developed by AlbertoBSD. I wish you very good luck!!\n";
   do {
   	if(input == stdin)	{
   		printf("crackBTC > ");
