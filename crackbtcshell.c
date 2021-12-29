@@ -21,7 +21,7 @@ https://github.com/amiralis/libaesni
 #include "sha512.h"
 #include "sha256.h"
 #include "libbase58.h"
-#include <iostream>
+#include <iostream.h>
 
 #define AES_BLOCKSIZE 16
 
