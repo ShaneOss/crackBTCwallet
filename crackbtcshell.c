@@ -21,6 +21,7 @@ https://github.com/amiralis/libaesni
 #include "sha512.h"
 #include "sha256.h"
 #include "libbase58.h"
+#include <iostream>
 
 #define AES_BLOCKSIZE 16
 
@@ -115,7 +116,7 @@ int main()  {
   salir = 0;
   input = stdin;
   
-  cout << "Developed by AlbertoBSD. I wish you very good luck!!\n";
+  std::cout << "Developed by AlbertoBSD. I wish you very good luck!!\n";
   do {
   	if(input == stdin)	{
   		printf("crackBTC > ");
