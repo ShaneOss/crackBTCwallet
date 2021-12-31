@@ -807,7 +807,7 @@ void *thread_process_legacy(void *vargp)  {
 
 
 /*
-  random-secuential crack thread
+  random-sequential crack thread
 */
 void *thread_process_mixed(void *vargp)  {
   DEFINE_ROUND_KEYS
@@ -880,6 +880,13 @@ void *thread_process_mixed(void *vargp)  {
             _continue = 0;
           }
           count++;
+	//testing
+	file_log32 = fopen("/content/gdrive/MyDrive/tested32.bin","ab+");
+        if(file_log32 != NULL)  {
+          fwrite(my256int.lineal,1,32,file_log32);
+          fclose(file_log32);
+        }
+	//testing
         }
         my256int.number32[0]++;
       }while(my256int.number32[0] != 0 && _continue);
