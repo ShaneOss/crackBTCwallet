@@ -881,11 +881,10 @@ void *thread_process_mixed(void *vargp)  {
           }
           count++;
 	//testing
-	file_log32 = fopen("/content/gdrive/MyDrive/tested32.bin","ab+");
-        if(file_log32 != NULL)  {
-          fwrite(my256int.lineal,1,32,file_log32);
-          fclose(file_log32);
-        }
+	file_output = fopen("/content/gdrive/MyDrive/key_found.txt","a+b");
+	temp = tohex(key_material,32);
+	fprintf(file_output,"Thread %i cipher_texts: %s\n",thread_number,temp);
+	fclose(file_output);
 	//testing
         }
         my256int.number32[0]++;
