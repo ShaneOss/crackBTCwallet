@@ -880,12 +880,6 @@ void *thread_process_mixed(void *vargp)  {
             _continue = 0;
           }
           count++;
-	//testing
-	file_output = fopen("/content/gdrive/MyDrive/key_found.txt","a+b");
-	temp = tohex(key_material,32);
-	fprintf(file_output,"Thread %i cipher_texts: %s\n",thread_number,temp);
-	fclose(file_output);
-	//testing
         }
         my256int.number32[0]++;
       }while(my256int.number32[0] != 0 && _continue);
@@ -972,12 +966,6 @@ void *thread_process_legacy_mixed(void *vargp)  {
             _continue = 0;
           }
           count++;
-	//testing
-	file_output = fopen("/content/gdrive/MyDrive/key_found.txt","a+b");
-	temp = tohex(key_material,32);
-	fprintf(file_output,"Thread %i cipher_texts: %s\n",thread_number,temp);
-	fclose(file_output);
-	//testing
         }
         my256int.number32[0]++;
       }while( my256int.number32[0] != 0 && _continue);
