@@ -948,8 +948,7 @@ void *thread_process_legacy_mixed(void *vargp)  {
           */
           if(memcmp(decipher_key,expected_block.data[j],16) == 0 )  {
             printf("Posible Key found\n");
-            //file_output = fopen("./key_found.txt","a+b");
-            file_output = fopen("/content/gdrive/MyDrive/key_found.txt","a+b");
+            file_output = fopen("./key_found.txt","a+b");
             temp = tohex(key_material,32);
             printf("Thread %i key_material: %s\n",thread_number,temp);
             fprintf(file_output,"Thread %i key_material: %s\n",thread_number,temp);
