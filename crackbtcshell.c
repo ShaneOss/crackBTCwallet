@@ -105,6 +105,7 @@ int main()  {
     CPUMODE = CPUMODE_LEGACY;
   }
   else  {
+    printf("Intel AESni enabled CPU\n");
     CPUMODE = CPUMODE_AESNI;
   }
   CRACKMODE = CRACKMODE_RANDOM;
