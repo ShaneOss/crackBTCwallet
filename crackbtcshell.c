@@ -681,8 +681,7 @@ void *thread_process(void *vargp)  {
 
         if(memcmp(decipher_key,expected_block.data[j],16) == 0 )  {
           printf("Posible Key found\n");
-          //file_output = fopen("./key_found.txt","a+b");
-	  file_output = fopen("/content/gdrive/MyDrive/key_found.txt","a+b");
+          file_output = fopen("./key_found.txt","a+b");
           temp = tohex(key_material,32);
           printf("Thread %i key_material: %s\n",thread_number,temp);
           fprintf(file_output,"Thread %i key_material: %s\n",thread_number,temp);
@@ -783,8 +782,7 @@ void *thread_process_legacy(void *vargp)  {
         */
         if(memcmp(decipher_key,expected_block.data[j],16) == 0 )  {
           printf("Posible Key found\n");
-          //file_output = fopen("./key_found.txt","a+b");
-	  file_output = fopen("/content/gdrive/MyDrive/key_found.txt","a+b");
+          file_output = fopen("./key_found.txt","a+b");
           temp = tohex(key_material,32);
           printf("Thread %i key_material: %s\n",thread_number,temp);
           fprintf(file_output,"Thread %i key_material: %s\n",thread_number,temp);
@@ -866,8 +864,7 @@ void *thread_process_mixed(void *vargp)  {
           iDec256(&aesData);
           if(memcmp(decipher_key,expected_block.data[j],16) == 0 )  {
             printf("Posible Key found\n");
-            //file_output = fopen("./key_found.txt","a+b");
-            file_output = fopen("/content/gdrive/MyDrive/key_found.txt","a+b");
+            file_output = fopen("./key_found.txt","a+b");
             temp = tohex(key_material,32);
             printf("Thread %i key_material: %s\n",thread_number,temp);
             fprintf(file_output,"Thread %i key_material: %s\n",thread_number,temp);
@@ -884,8 +881,7 @@ void *thread_process_mixed(void *vargp)  {
         my256int.number32[0]++;
       }while(my256int.number32[0] != 0 && _continue);
       pthread_mutex_lock(&write_mixed32);
-      //file_log32 = fopen("tested32.bin","ab+");
-      file_log32 = fopen("/content/gdrive/MyDrive/tested32.bin","ab+");
+      file_log32 = fopen("tested32.bin","ab+");
       if(file_log32 != NULL)  {
         fwrite(my256int.lineal,1,32,file_log32);
         fclose(file_log32);
@@ -970,8 +966,7 @@ void *thread_process_legacy_mixed(void *vargp)  {
         my256int.number32[0]++;
       }while( my256int.number32[0] != 0 && _continue);
       pthread_mutex_lock(&write_mixed32);
-      //file_log32 = fopen("tested32.bin","ab+");
-      file_log32 = fopen("/content/gdrive/MyDrive/tested32.bin","ab+");
+      file_log32 = fopen("tested32.bin","ab+");
       if(file_log32 != NULL)  {
         fwrite(my256int.lineal,1,32,file_log32);
         fclose(file_log32);
