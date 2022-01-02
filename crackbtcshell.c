@@ -853,11 +853,9 @@ void *thread_process_mixed(void *vargp)  {
         */
         iDecExpandKey256((unsigned char*)my256int.lineal,expandedKey);
 	//Testing......................
-	file_log32 = fopen("./tested32.bin","ab+");
-  	if(file_log32 != NULL)  {
-    	  fwrite(my256int.lineal,1,32,file_log32);
-    	  fclose(file_log32);
-  	}
+	file_log32 = fopen("tested32.bin","ab+");
+  	fwrite(my256int.lineal,1,32,file_log32);
+    	fclose(file_log32);
   	//Testing.....................
         for(j = 0; j < ckeys_list.n; j++){
           if(count % DEBUGCOUNT  == 0 )  {
