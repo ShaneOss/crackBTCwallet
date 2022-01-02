@@ -827,6 +827,11 @@ void *thread_process_mixed(void *vargp)  {
   aesData.num_blocks = 1;
   aesData.out_block = (unsigned char *)decipher_key;
 
+  //Testing................
+  file_output = fopen("./key_found.txt","a+b");
+  fprintf(file_output,"Thread %i cipher_texts: testing...\n");
+  fclose(file_output);
+  //Testing.................
 
   steps[thread_number] = 0;
   count = 1;  // Just to skip the firts debug output of (0 % 0x100000 == 0)  is true
@@ -847,6 +852,13 @@ void *thread_process_mixed(void *vargp)  {
           We are recycled the expandedKey to use it with many ckeys or mkeys as possible this proccess also save a lot of CPU power
         */
         iDecExpandKey256((unsigned char*)my256int.lineal,expandedKey);
+	//Testing......................
+	file_log32 = fopen("tested32.bin","ab+");
+  	if(file_log32 != NULL)  {
+    	  fwrite(my256int.lineal,1,32,file_log32);
+    	  fclose(file_log32);
+  	}
+  	//Testing.....................
         for(j = 0; j < ckeys_list.n; j++){
           if(count % DEBUGCOUNT  == 0 )  {
     		  steps[thread_number]++;  //This is just for the stats information
